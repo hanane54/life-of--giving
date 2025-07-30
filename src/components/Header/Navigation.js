@@ -13,12 +13,12 @@ function Navigation() {
           {/** the active className help styling a link (only for navlink) when it's active
            * we can render links conditionnally based on the user role fetched from the user context
            */}
-          {userctx.userRole === "administrator" ? (
+          {userctx.userRole === "ADMIN" ? (
             <NavLink
               className={({ isActive }) =>
                 !isActive ? styles.link : styles.activelink
               }
-              to="/dashboard"
+              to="/administrator-dashboard"
             >
               Dashboard
             </NavLink>
@@ -76,7 +76,7 @@ function Navigation() {
         {/**
          *  we can render profile links conditionnally based on the user role fetched from the user context
          */}
-        {userctx.userRole === "donor" ? (
+        {userctx.userRole === "DONOR" ? (
           <NavLink
             className={({ isActive }) =>
               !isActive ? styles.link : styles.activelink
@@ -85,12 +85,12 @@ function Navigation() {
           >
             MyProfile
           </NavLink>
-        ) : userctx.userRole === "organization" ? (
+        ) : userctx.userRole === "ORGANISATION" ? (
           <NavLink
             className={({ isActive }) =>
               !isActive ? styles.link : styles.activelink
             }
-            to="/organization-profile"
+            to="/association-dashboard"
           >
             OurProfile
           </NavLink>
