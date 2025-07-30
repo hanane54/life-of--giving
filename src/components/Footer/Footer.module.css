@@ -8,13 +8,3 @@
     align-items: center;
     flex-wrap: wrap;
 }
-.sponsors{
-    display :flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.sponsortitle{
-    font-family:  var(--titles-font);
-    color:var(--fourth-color);
-    font-size: 25px;
-}
